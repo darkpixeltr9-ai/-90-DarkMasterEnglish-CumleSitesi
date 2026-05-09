@@ -202,26 +202,44 @@
             margin-bottom: 12px;
         }
 
-        .support-card {
+        .support-card, .link-card {
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 20px;
-            margin-top: 40px;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             gap: 15px;
             flex-direction: row;
         }
 
+        .link-card {
+            margin-top: 40px;
+            border-color: var(--neon);
+        }
+
         @media (max-width: 600px) {
-            .support-card { flex-direction: column; text-align: center; }
+            .support-card, .link-card { flex-direction: column; text-align: center; }
             .top-info { justify-content: center; text-align: center; }
         }
 
-        .support-icon { color: var(--accent); flex-shrink: 0; }
-        .support-content h4 { margin: 0 0 5px 0; font-size: 1rem; }
-        .support-content p { margin: 0; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+        .support-icon, .link-icon { color: var(--accent); flex-shrink: 0; }
+        .support-content h4, .link-content h4 { margin: 0 0 5px 0; font-size: 1rem; }
+        .support-content p, .link-content p { margin: 0; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+        
+        .external-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link:hover {
+            border-bottom-color: var(--accent);
+            text-shadow: 0 0 8px var(--accent);
+        }
 
         .empty-state {
             text-align: center;
@@ -270,6 +288,17 @@
 
     <div id="res" class="result-container">
         <div class="empty-state">Düzensiz (180+) veya düzenli, tüm fiilleri doğru çekimleyebilirim...</div>
+    </div>
+
+    <!-- KELİME SİTEMİZ BÖLÜMÜ -->
+    <div class="link-card">
+        <div class="link-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        </div>
+        <div class="link-content">
+            <h4>KELİME SİTEMİZ</h4>
+            <p>Diğer kaynaklarımıza göz atın: <a href="https://darkpixeltr9-ai.github.io/Ingilizce-halleri-2/" target="_blank" class="external-link">https://darkpixeltr9-ai.github.io/Ingilizce-halleri-2/</a></p>
+        </div>
     </div>
 
     <div class="support-card">
