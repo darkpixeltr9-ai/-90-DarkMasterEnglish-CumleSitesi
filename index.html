@@ -249,6 +249,38 @@
             border-radius: 20px;
             font-size: 1rem;
         }
+        /* Uygulama indirme sitesi butonu */
+        .app-download-button {
+            margin: 18px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            min-width: 275px;
+            padding: 13px 24px;
+            border-radius: 13px;
+            background: linear-gradient(135deg, #2563eb, var(--neon));
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.98rem;
+            letter-spacing: .2px;
+            border: 1px solid rgba(56, 189, 248, .55);
+            box-shadow: 0 0 18px rgba(14, 165, 233, .22);
+            transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+        }
+
+        .app-download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 28px rgba(14, 165, 233, .45);
+            filter: brightness(1.08);
+        }
+
+        .app-download-button svg {
+            flex-shrink: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -275,6 +307,12 @@
     <div class="header">
         <h1>(+90)DarkMaster <span>English</span></h1>
         <p class="slogan">İngilizce 1. hal girin, gerisini V2 ve V3 yapsın!</p>
+
+        <!-- CÜMLE UYGULAMASI YÖNLENDİRME BUTONU -->
+        <a href="BURAYA-CUMLE-UYGULAMASI-INDIRME-SITESI-LINKINI-YAZ" target="_blank" class="app-download-button">
+            <span style="font-size:1.05rem;">📱</span>
+            (+90)DME Cümle Uygulaması
+        </a>
     </div>
 
     <div class="input-section">
@@ -284,6 +322,8 @@
     <div id="res" class="result-container">
         <div class="empty-state">Düzensiz (180+) veya düzenli, tüm fiilleri doğru çekimleyebilirim...</div>
     </div>
+
+
 
     <!-- KELİME SİTEMİZ BÖLÜMÜ -->
     <div class="link-card">
